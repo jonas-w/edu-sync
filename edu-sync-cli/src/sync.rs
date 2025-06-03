@@ -84,6 +84,7 @@ impl Syncer {
                     .map(move |(course_id, course_config)| {
                         let course_path =
                             path.join(course_config.name_as_path_component().as_ref());
+                        println!("course_path = {}", course_path.display());
                         (account.clone(), course_id, course_config.name, course_path)
                     })
             })
